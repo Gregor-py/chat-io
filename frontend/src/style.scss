@@ -1,0 +1,150 @@
+.chat {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	.entry-form {
+		transform: scale(3);
+		font-size: 1.6rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 400px;
+		&__input-container {
+			margin: 5px 0 0 0;
+			border: 1px #716f6f solid;
+			width: 100%;
+		}
+		&__input {
+			padding: 5px;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			font-weight: 500;
+		}
+		&__enter-button {
+			margin: 10px 0 0 0;
+			padding: 5px 10px;
+			background-color: #1E9543;
+			color: #fff;
+			width: 100%;
+			border-radius: 5px;
+			transition: 0.3s;
+			&:hover {
+				box-shadow: 0 6px 6px rgba(29, 146, 65, 0.5);
+			}
+			&:active {
+				transition: 0.1s;
+				box-shadow: 0 1px 1px rgba(29, 146, 65, 0.5);
+				transform: translate(0, 0.5px);
+			}
+		}
+		&__header {
+			padding: 5px;
+			height: 100%;
+			text-align: center;
+			font-weight: 800;
+			width: 100%;
+			font-size: 1.5rem;
+		}
+	}
+}
+.chat-room {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 3fr 14fr;
+	&__side-panel {
+		background-color: #F6F8FA;
+		padding: 30px 20px;
+	}
+	&__chat-body {
+	}
+}
+.create-message-form {
+	display: grid;
+	grid-template-columns: 1fr 100px;
+	border-top: 1px #d4d4d4 solid;
+	padding-top: 15px;
+	gap: 8px;
+	&__textarea {
+		overflow: auto;
+		resize: none;
+		border-radius: 5px;
+		border: 1px #d4d4d4 solid;
+		padding: 8px;
+
+	}
+	&__send-button {
+		text-transform: uppercase;
+		font-weight: 700;
+		border-radius: 5px;
+		color: white;
+		background-color: #1E9543;
+		transition: 0.3s;
+		&:hover {
+			box-shadow: 0 6px 6px rgba(29, 146, 65, 0.5);
+		}
+		&:active {
+			box-shadow: 0 1px 1px rgba(29, 146, 65, 0.5);
+			transform: translate(0, 2px);
+		}
+	}
+}
+.chat-body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 60px;
+	padding: 15px;
+	&__messages {
+		height: calc(100vh - 100px);
+		background-color: #ffffff;
+		overflow: auto;
+	}
+	&__create-message-form {
+		background-color: #ffffff;
+	}
+}
+.side-panel {
+	&__room-name {
+		border-bottom: 1px #959595 solid;
+		span {
+			font-weight: 700;
+		}
+		padding: 0 0 17px 0;
+	}
+	&__online-count {
+
+	}
+	&__online-count-header {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		span {
+			font-weight: 700;
+		}
+	}
+	&__user {
+		padding: 10px;
+		background-color: #ffffff;
+		margin-bottom: 8px;
+		font-weight: 700;
+		border-radius: 5px;
+	}
+}
+.chat-message {
+	margin-top: 10px;
+	&__header {
+
+	}
+	&__user-name {
+	}
+	&__text {
+
+	}
+	.message-header {
+		span {
+			font-weight: 700;
+		}
+	}
+}
